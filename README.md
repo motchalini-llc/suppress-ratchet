@@ -11,7 +11,15 @@ Your linter (`eslint`, `biome`, `ruff`, `pylint`) can pass while `eslint-disable
 
 It does **not** just rerun your linter. It catches the thing a green lint run can't: someone silencing a rule with a disable comment instead of fixing the code.
 
-Sibling to [Type Ratchet](https://github.com/marketplace/actions/type-ratchet) (type escape hatches) and [Test Ratchet](https://github.com/marketplace/actions/test-ratchet) (skipped / focused tests).
+## The Ratchet family
+
+Three zero-dependency PR gates, each blocking a different way a green check gets faked:
+
+| Action | Blocks the cheat |
+|---|---|
+| [Type Ratchet](https://github.com/marketplace/actions/type-ratchet) | type escape hatches — `any` / `as any` / `# type: ignore` |
+| [Test Ratchet](https://github.com/marketplace/actions/test-ratchet) | disabled tests — `it.skip` / `.only` / `@pytest.mark.skip` |
+| [Suppress Ratchet](https://github.com/marketplace/actions/suppress-ratchet) **← this repo** | linter suppressions — `eslint-disable` / `biome-ignore` / `# noqa` |
 
 ## Usage
 
