@@ -1,5 +1,5 @@
 name: 'Suppress Ratchet'
-description: 'Block new linter suppressions (eslint-disable, biome-ignore, noqa, pylint: disable) from creeping into a linted codebase.'
+description: 'Fail PRs that add linter suppressions (eslint-disable, biome-ignore, noqa). Zero-config guardrail for AI-written code.'
 author: 'motchalini'
 branding:
   icon: 'eye-off'
